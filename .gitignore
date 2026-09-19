@@ -11,4 +11,15 @@ data/staging/*
 # Ignore Python environments and credentials
 .env
 .venv/
+venv/
+ENV/
 __pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+
+*.pem
+*.key
+
+.DS_Store
+Thumbs.db
