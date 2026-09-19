@@ -37,22 +37,22 @@ The primary goal of this project is to architect and implement a production-grad
 
 ```mermaid
 flowchart LR
-    subgraph Capture [Stage 1: Data Capture (OLTP / TAVI)]
-        A[Paper Receipts & Invoices] -->|OCR Extraction| Py1[Python Ingestors]
-        B[Personal Inboxes & Bank Statements] -->|Email Parsers & Extraction| Py1
-        C[Hardware Logs & Docker APIs] -->|Telemetry Collector| Py1
+    subgraph Capture ["Stage 1: Data Capture (OLTP / TAVI)"]
+        A["Paper Receipts & Invoices"] -->|OCR Extraction| Py1["Python Ingestors"]
+        B["Personal Inboxes & Bank Statements"] -->|Email Parsers & Extraction| Py1
+        C["Hardware Logs & Docker APIs"] -->|Telemetry Collector| Py1
     end
 
-    subgraph Integration [Stage 2: Data Integration (Middleware)]
-        Py1 --> D[CACTUS Validation & Normalization]
-        D --> E[ETL / Staging Pipeline]
+    subgraph Integration ["Stage 2: Data Integration (Middleware)"]
+        Py1 --> D["CACTUS Validation & Normalization"]
+        D --> E["ETL / Staging Pipeline"]
     end
 
-    subgraph Warehouse [Stage 3: Data Science (OLAP)]
-        E --> F[(Supabase / PostgreSQL Warehouse)]
-        F --> G[Statistical & Anomaly Analysis]
+    subgraph Warehouse ["Stage 3: Data Science (OLAP)"]
+        E --> F[("Supabase / PostgreSQL Warehouse")]
+        F --> G["Statistical & Anomaly Analysis"]
     end
 
-    subgraph Decision [Stage 4: Decision Science]
-        G --> H[Power BI Executive Dashboard]
+    subgraph Decision ["Stage 4: Decision Science"]
+        G --> H["Power BI Executive Dashboard"]
     end
