@@ -34,3 +34,24 @@ The primary goal of this project is to architect and implement a production-grad
 2.  **Middleware (ETL/ELT):** Python scripts act as the middleware, performing validation, cleansing, and normalization (CACTUS) before transitioning data through the pipeline .
 3.  **OLAP (Warehouse):** Transformed data is loaded into Supabase/Postgres, structured for analytical processing and historical trend analysis .
 4.  **Presentation Layer:** Structured data is queried by Power BI to generate an "Enterprise Executive Dashboard" for household decision-makers .
+
+flowchart LR
+    subgraph Capture [Stage 1: Data Capture (OLTP / TAVI)]
+        A[Paper Receipts & Invoices] -->|OCR Extraction| Py1[Python Ingestors]
+        B[Personal Inboxes & Bank Statements] -->|Email Parsers & Extraction| Py1
+        C[Hardware Logs & Docker APIs] -->|Telemetry Collector| Py1
+    end
+
+    subgraph Integration [Stage 2: Data Integration (Middleware)]
+        Py1 --> D[CACTUS Validation & Normalization]
+        D --> E[ETL / Staging Pipeline]
+    end
+
+    subgraph Warehouse [Stage 3: Data Science (OLAP)]
+        E --> F[(Supabase / PostgreSQL Warehouse)]
+        F --> G[Statistical & Anomaly Analysis]
+    end
+
+    subgraph Decision [Stage 4: Decision Science]
+        G --> H[Power BI Executive Dashboard]
+    end
