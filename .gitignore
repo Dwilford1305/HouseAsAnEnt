@@ -1,0 +1,14 @@
+# Ignore all real household data
+data/raw/*
+data/staging/*
+
+# Allow specific mock files and placeholders
+!data/raw/mock_*
+!data/raw/sample_*
+!data/raw/.gitkeep
+!data/staging/.gitkeep
+
+# Ignore Python environments and credentials
+.env
+.venv/
+__pycache__/
