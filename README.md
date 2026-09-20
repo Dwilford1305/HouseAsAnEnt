@@ -35,6 +35,11 @@ The primary goal of this project is to architect and implement a production-grad
 3.  **OLAP (Warehouse):** Transformed data is loaded into Supabase/Postgres, structured for analytical processing and historical trend analysis.
 4.  **Presentation Layer:** Structured data is queried by Power BI to generate an "Enterprise Executive Dashboard" for household decision-makers.
 
+---
+
+**Project Lead:** [Derek Wilford](https://www.linkedin.com/in/dwilford/)  
+*(Building in public: Follow this project's Agile progress on LinkedIn)*
+
 ```mermaid
 flowchart LR
     subgraph Capture ["Stage 1: Data Capture (OLTP / TAVI)"]
@@ -56,7 +61,3 @@ flowchart LR
     subgraph Decision ["Stage 4: Decision Science"]
         G --> H["Power BI Executive Dashboard"]
     end
-
----
-**Project Lead:** [Derek Wilford](https://www.linkedin.com/in/dwilford/)  
-*(Building in public: Follow this project's Agile progress on LinkedIn)*
