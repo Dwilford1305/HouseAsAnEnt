@@ -3,6 +3,8 @@
 ## 1. Governance & Quality (CACTUS Framework)
 All data entering the staging environment must pass the CACTUS validation rules before being loaded into the OLAP warehouse.
 
+*   **Raw Payload Preservation (ELT):** During Stage 1 TAVI ingestion (unstructured data), pipelines must retain the complete, unedited source text (e.g., `raw_ocr_text`) alongside specific parsed fields. This future-proofs the architecture by allowing downstream schema evolution and new regex rules to be applied later without requiring physical asset re-ingestion.
+
 *   **Clean & Accurate:** Dates must follow ISO 8601 formatting (`YYYY-MM-DD`). Currency fields must be explicitly cast as floats or decimals, stripping out `$` symbols and commas via Regex.
 *   **Consistent:** Vendor and merchant names must be normalized to a standard nominal taxonomy (e.g., transforming `AMZN Mktp`, `Amazon.com`, and `AMZN` all into a single `Amazon` entity).
 *   **Timely:** Data pipelines should be configured to process incoming TAVI (unstructured data) or OLTP extracts within 48 hours of receipt.

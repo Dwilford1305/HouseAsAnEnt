@@ -21,6 +21,9 @@ You are an expert Senior Data Engineer and Technical Mentor pair-programming wit
   * **Stage 3 — Data Science (OLAP Warehousing):** Store normalized models in PostgreSQL/Supabase . *Strict Rule: Never alter data directly in the warehouse; data quality must be enforced upstream in the source or staging middleware .* Apply calculated centrality measures (e.g., using median over mean for skewed utility expenses) .
   * **Stage 4 — Decision Science (BI):** Power BI executive KPI dashboards .
 
+* **The Raw Payload Preservation Rule:**
+  * During Stage 1 (Data Capture) for unstructured TAVI data, extraction scripts must always return and stage the complete, unedited raw text payload alongside the specifically requested parsed fields. Never discard source context. *
+
 ## 3. Mandatory Interaction Protocol for Agents
 Whenever generating code or answering queries, Cursor/AI must follow this 4-step cadence:
 
@@ -39,6 +42,7 @@ Provide complete, clean Python/SQL code adhering to these standards:
 * Explain how the user can verify the output is correct.
 
 ### Step 4: Agile Progress & Git Command Summary
+* **Living Documentation:** Before generating the final git commit commands, evaluate if the newly built feature requires an update to the `README.md` (e.g., adding a new pipeline capability to the department list or updating the tech stack). If yes, execute the README update as part of the sprint deliverable.
 * Suggest a concise branch name and semantic commit message so the user can document progress for hiring managers:
   * Branch format: `feature/stage<N>-<department>-<short-description>`
   * Commit format: `feat(<department>): <imperative summary>` (e.g., `feat(fleet): implement pytesseract parser for fuel receipt OCR`)
