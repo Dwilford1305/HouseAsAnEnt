@@ -1,0 +1,7 @@
+"Account Number","Post Date","Check","Description","Debit","Credit","Status"
+"XXXX-1234","2026-09-01","","WALMART #1234 GROCERY","-142.50","","Cleared"
+"XXXX-1234","2026-09-03","","AMZN Mktp US*HT45","-22.99","","Cleared"
+"XXXX-1234","2026-09-05","","CITY OF WETASKIWIN UTIL","-115.00","","Cleared"
+"XXXX-1234","2026-09-10","","SHELL OIL 48392","-65.20","","Cleared"
+"XXXX-1234","2026-09-15","","PAYROLL DEPOSIT INC","","3200.00","Cleared"
+"XXXX-1234","2026-09-18","","MCDONALDS 3921","-14.50","","Pending"
