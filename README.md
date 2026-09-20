@@ -56,3 +56,7 @@ flowchart LR
     subgraph Decision ["Stage 4: Decision Science"]
         G --> H["Power BI Executive Dashboard"]
     end
+
+---
+**Project Lead:** [Derek Wilford](https://www.linkedin.com/in/dwilford/)  
+*(Building in public: Follow this project's Agile progress on LinkedIn)*
