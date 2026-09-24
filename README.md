@@ -13,7 +13,7 @@ The primary goal of this project is to architect and implement a production-grad
     *   Automates the extraction (OLTP) of financial data exclusively from static bank statements, email parsers, and receipt OCR.
 *   **Department 3: IT Infrastructure (Home Lab Telemetry)**
     *   Monitors the digital health, network throughput, server uptime, and containerized application health of the household.
-    *   Programmatically extracts raw system logs from networking hardware and Docker container status APIs.
+    *   Programmatically extracts raw system logs from networking hardware and Docker container status via `src/capture/telemetry_collector.py` (ICMP ping plus daemon health, with `data/raw/mock_telemetry_logs.json` as the offline fallback).
 *   **Department 4: Facilities Management (Physical Asset Management)**
     *   Tracks and analyzes property health, utility consumption, and routine structural maintenance.
     *   Captures data through unstructured document ingestion (tax assessments, paper bills), system of record extraction (offline `.eml` utility bills via `src/capture/utility_email_parser.py`, staged to `data/staging/staged_utility_bills.csv`, plus bank statements), and manual maintenance logs.
