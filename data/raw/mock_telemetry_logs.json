@@ -1,0 +1,18 @@
+[
+    {
+      "timestamp": "2026-09-23T22:00:00Z",
+      "target": "192.168.1.1",
+      "telemetry_type": "router_ping",
+      "status": "ONLINE",
+      "latency_ms": 4.12,
+      "raw_payload": "64 bytes from 192.168.1.1: icmp_seq=1 ttl=64 time=4.12 ms"
+    },
+    {
+      "timestamp": "2026-09-23T22:00:01Z",
+      "target": "docker_daemon",
+      "telemetry_type": "docker_stats",
+      "status": "HEALTHY",
+      "active_containers": 4,
+      "raw_payload": "{\"total_containers\": 4, \"running\": 4, \"paused\": 0, \"stopped\": 0, \"mem_limit\": true}"
+    }
+  ]
