@@ -1,4 +1,6 @@
+beautifulsoup4==4.15.0
 numpy==2.5.3
+opencv-python==5.0.0.93
 packaging==26.3
 pandas==2.3.3
 pillow==12.3.0
@@ -7,4 +9,6 @@ python-dateutil==2.9.0.post0
 python-dotenv==1.2.3
 pytz==2026.3.post1
 six==1.17.0
+soupsieve==2.10
+typing_extensions==4.16.0
 tzdata==2026.4

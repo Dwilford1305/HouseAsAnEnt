@@ -1,0 +1,20 @@
+From: billing@fake-enmax-energy.com
+To: derek@household-enterprise.com
+Subject: Your Synthetic Utility Statement
+Date: Wed, 23 Sep 2026 10:00:00 -0600
+Content-Type: text/html; charset="UTF-8"
+
+<html>
+<body>
+<div>
+    <h1>Household as an Enterprise - Utility Statement</h1>
+    <p>Hi Derek,</p>
+    <p>This is a synthetic HTML email designed to test the BeautifulSoup parsing logic.</p>
+    <br>
+    <p>Account number: 99998888</p>
+    <p>Total amount due now*: <strong>$150.75</strong></p>
+    <br>
+    <p>Thank you for testing the pipeline.</p>
+</div>
+</body>
+</html> 
