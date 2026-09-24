@@ -16,7 +16,7 @@ The primary goal of this project is to architect and implement a production-grad
     *   Programmatically extracts raw system logs from networking hardware and Docker container status APIs.
 *   **Department 4: Facilities Management (Physical Asset Management)**
     *   Tracks and analyzes property health, utility consumption, and routine structural maintenance.
-    *   Captures data through unstructured document ingestion (tax assessments, paper bills), system of record extraction (email parsers and bank statements), and manual maintenance logs.
+    *   Captures data through unstructured document ingestion (tax assessments, paper bills), system of record extraction (offline `.eml` utility bills via `src/capture/utility_email_parser.py`, staged to `data/staging/staged_utility_bills.csv`, plus bank statements), and manual maintenance logs.
 
 ## Technical Stack
 
